@@ -46,7 +46,7 @@ echo "
             <p><strong>Jumlah Tiket Dewasa:</strong> $jumlah_tiket_dewasa</p>
             <p><strong>Jumlah Tiket Anak-anak:</strong> $jumlah_tiket_anak</p>
             <p><strong>Hari Pemesanan:</strong> " . ucfirst($hari_pemesanan) . "</p>
-            <p><strong>Total Harga:</strong> Rp" . number_format($total_harga, 0, ',', '.') . "</p>
+            <p><strong>Total Harga:</strong> Rp" . number_format($total_harga_dewasa + $total_harga_anak, 0, ',', '.') . "</p>
             <p><strong>Diskon:</strong> $diskon_message</p>
         </div>
         <!-- Tombol Cetak PDF -->
@@ -57,7 +57,7 @@ echo "
             <input type='hidden' name='jumlah_tiket_anak' value='" . $jumlah_tiket_anak . "' />
             <input type='hidden' name='hari_pemesanan' value='" . $hari_pemesanan . "' />
             <input type='hidden' name='total_harga' value='" . $total_harga . "' />
-            <button type='submit' class='btn btn-danger'>Cetak Tiket (PDF)</button>
+            <button type='submit' class='btn btn-danger'>Cetak Tiket</button>
         </form>
     </div>
 </body>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://localhost/php/bioskop/html/pemesanan.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Bioskop</title>
+    <!-- Bootstrap -->
+    <link href="./Pemesanan Tiket Bioskop_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="./Pemesanan Tiket Bioskop_files/style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-danger py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="http://localhost/html/index.html">IniBioskop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-3 mb-4 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="http://localhost/php/bioskop/html/index.html">Kembali</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Form Pemesanan -->
+    <div class="container mt-5">
+      <h3 class="text-center">Pemesanan Tiket Bioskop</h3>
+      <form action="http://localhost/php/bioskop/php/proses_pemesanan.php" method="POST">
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama Pemesan</label>
+          <input type="text" name="nama" id="nama" class="form-control" pattern="[A-Za-z\s]+" title="Nama hanya boleh mengandung huruf" required="">
+        </div>
+        <div class="mb-3">
+          <label for="pilihfilm" class="form-label">Pilih Film</label>
+          <select name="pilih_film" id="pilihfilm" class="form-select" required="">
+            <option value="Sword Art Online I">Sword Art Online I</option>
+            <option value="Sword Art Online II">Sword Art Online II</option>
+            <option value="Sword Art Online III">Sword Art Online III</option>
+            <option value="Sword Art Online IV">Sword Art Online IV</option>
+            <option value="Violet Evergarden Movie I">
+              Violet Evergarden Movie I
+            </option>
+            <option value="Violet Evergarden Movie II">
+              Violet Evergarden Movie II
+            </option>
+            <option value="Doraemon Stand By Me I">
+              Doraemon Stand By Me I
+            </option>
+            <option value="Doraemon Stand By Me II">
+              Doraemon Stand By Me II
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="jumlahTiketDewasa" class="form-label">Jumlah Tiket Dewasa - Harga Rp. 50.000</label>
+          <input type="number" name="jumlah_tiket_dewasa" id="jumlahTiketDewasa" class="form-control" min="0" required="">
+        </div>
+        <div class="mb-3">
+          <label for="jumlahTiketAnak" class="form-label">Jumlah Tiket Anak-anak - Harga Rp. 30.000</label>
+          <input type="number" name="jumlah_tiket_anak" id="jumlahTiketAnak" class="form-control" min="0" required="">
+        </div>
+        <div class="mb-3">
+          <label for="hariPemesanan" class="form-label">Hari Pemesanan</label>
+          <select name="hari_pemesanan" id="hariPemesanan" class="form-select" required="">
+            <option value="weekday">Weekday</option>
+            <option value="weekend">
+              Weekend (Sabtu/Minggu) +Rp10.000 per tiket
+            </option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Hitung Total</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./Pemesanan Tiket Bioskop_files/bootstrap.bundle.min.js.download"></script>
+  
+
+</body></html>
